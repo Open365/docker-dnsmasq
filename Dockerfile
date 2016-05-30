@@ -7,7 +7,7 @@ COPY start.sh /tmp/start.sh
 COPY sleep-infinity.sh /tmp/sleep-infinity.sh
 COPY watcher.js /tmp/watcher.js
 RUN apk update && \
-	apk add dnsmasq inotify-tools && \
+	apk add inotify-tools && \
 	chmod +x /tmp/start.sh && \
 	chmod +x /tmp/sleep-infinity.sh && \
 	rm -r /var/cache/apk/*
