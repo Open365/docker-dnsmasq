@@ -8,8 +8,7 @@ COPY start.sh /tmp/start.sh
 COPY sleep-infinity.sh /tmp/sleep-infinity.sh
 COPY watcher.js /tmp/watcher.js
 
-RUN apk update && \
-	/scripts-base/buildDependencies.sh --production --install && \
+RUN /scripts-base/buildDependencies.sh --production --install && \
 	chmod +x /tmp/start.sh && \
 	chmod +x /tmp/sleep-infinity.sh && \
 	rm -r /var/cache/apk/* && \
