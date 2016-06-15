@@ -14,6 +14,6 @@ RUN /scripts-base/buildDependencies.sh --production --install && \
 	rm -r /var/cache/apk/* && \
 	/scripts-base/buildDependencies.sh --production --purgue
 
-CMD /tmp/start.sh
+CMD ["/tmp/start.sh"]
 
 EXPOSE 53
