@@ -1,3 +1,5 @@
 #!/bin/sh
 
-while true; do sleep 10000d;done
+trap 'exit 0' SIGTERM SIGINT EXIT
+
+while true; do sleep 2 ;done
