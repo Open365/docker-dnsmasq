@@ -6,7 +6,6 @@ ENV WHATAMI dnsmasq
 COPY alpine-*.list /var/service/
 COPY start.sh /tmp/start.sh
 COPY sleep-infinity.sh /tmp/sleep-infinity.sh
-COPY watcher.js /tmp/watcher.js
 
 RUN /scripts-base/buildDependencies.sh --production --install && \
 	chmod +x /tmp/start.sh && \
